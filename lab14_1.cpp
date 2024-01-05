@@ -4,15 +4,15 @@ using namespace std;
 template <typename T>
 void insertionSort(T d[],int N){
     for (int i = 1; i < N; i++) {
-        T key = d[i];
+        T swap = d[i];
         int j = i - 1;
 
         cout << "Pass " << i << ":";
-        while (j >= 0 && d[j] < key) {
+        while (j >= 0 && d[j] < swap) {
             d[j + 1] = d[j];
             j = j - 1;
         }
-        d[j + 1] = key;
+        d[j + 1] = swap;
 		for (int k = 0; k < N; k++) {
             cout << d[k] << " " ;
         }
